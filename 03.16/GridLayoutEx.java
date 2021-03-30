@@ -2,13 +2,16 @@ import javax.swing.*;
 import java.awt.*;
 
 public class GridLayoutEx extends JFrame {
-    private JButton btn1 = new JButton("Btn1");
-    private JButton btn2 = new JButton("Btn2");
-    private JButton btn3 = new JButton("Btn3");
-    private JButton btn4 = new JButton("Btn4");
-    private JButton btn5 = new JButton("Btn5");
+    private JLabel name = new JLabel("이름");
+    private JLabel student_ID = new JLabel("학번");
+    private JLabel department = new JLabel("학과");
+    private JLabel subject = new JLabel("과목");
+    private JTextField field_name = new JTextField("");
+    private JTextField field_student_ID = new JTextField("");
+    private JTextField field_department = new JTextField("");
+    private JTextField field_subject = new JTextField("");
     GridLayoutEx() {
-        this.setTitle("GridLayout");
+        this.setTitle("GridLayout Sample");
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.formDesign();
         this.eventHandler();
@@ -17,12 +20,17 @@ public class GridLayoutEx extends JFrame {
     }
 
     private void formDesign() {
-        this.setLayout(new GridLayout(3,2,5,5));
-        this.add(btn1);
-        this.add(btn2);
-        this.add(btn3);
-        this.add(btn4);
-        this.add(btn5);
+        this.setLayout(new GridLayout(4, 2,5,5));
+        this.add(name);
+        this.add(field_name);
+        this.add(student_ID);
+        this.add(field_student_ID);
+        this.add(department);
+        this.add(field_department);
+        this.add(subject);
+        this.add(field_subject);
+
+
     }
 
     private void eventHandler() {
